@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1(class="page-header") Teas
+
+  table(class="table")
+    thead
+      th Tea Name
+      th Country
+      th Price
+      th Reorderable
+    tbody
+      each tea in teas
+        tr
+          td= tea.name
+          td= tea.country
+          td= tea.price
+          td= tea.reorderable ? "Yes" : "No"
